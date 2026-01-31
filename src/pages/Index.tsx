@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { useSearch } from "@/hooks/useSearch";
 
 const Index = () => {
-  const { results, isLoading, hasSearched, currentQuery, search } = useSearch();
+  const { results, isLoading, hasSearched, currentQuery, totalResults, search } = useSearch();
   const [searchView, setSearchView] = useState(false);
 
   const handleSearch = (query: string) => {
@@ -78,7 +78,7 @@ const Index = () => {
             results={results}
             isLoading={isLoading}
             query={currentQuery}
-            totalResults={results.length * 1000}
+            totalResults={totalResults}
           />
         </div>
       </main>
