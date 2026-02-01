@@ -19,15 +19,15 @@ const Index = () => {
     return (
       <div className="min-h-screen flex flex-col web-pattern">
         {/* Hero Section */}
-        <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
-          <div className="w-full max-w-2xl mx-auto text-center space-y-8">
+        <main className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-16">
+          <div className="w-full max-w-2xl mx-auto text-center space-y-6 sm:space-y-8">
             {/* Logo */}
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-4 sm:mb-8">
               <Logo size="xl" />
             </div>
 
             {/* Tagline */}
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-8 px-2">
               جستجوی هوشمند در گستره وب فارسی
             </p>
 
@@ -35,7 +35,7 @@ const Index = () => {
             <SearchBar onSearch={handleSearch} variant="hero" />
 
             {/* Quick Links */}
-            <div className="pt-8">
+            <div className="pt-4 sm:pt-8">
               <QuickLinks onSearch={handleSearch} />
             </div>
           </div>
@@ -50,8 +50,8 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-        <div className="container mx-auto py-4">
-          <div className="flex items-center gap-6">
+        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          <div className="flex items-center gap-3 sm:gap-6">
             <button
               onClick={() => setSearchView(false)}
               className="flex-shrink-0 hover:opacity-80 transition-opacity"
@@ -72,7 +72,7 @@ const Index = () => {
       </header>
 
       {/* Results */}
-      <main className="flex-1 container mx-auto py-6">
+      <main className="flex-1 container mx-auto px-3 sm:px-4 py-4 sm:py-6">
         <div className="max-w-2xl">
           <SearchResults
             results={results}

@@ -16,14 +16,14 @@ interface QuickLinksProps {
 
 export const QuickLinks: React.FC<QuickLinksProps> = ({ onSearch }) => {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2">
+    <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
       {links.map((link) => (
         <button
           key={link.label}
           onClick={() => onSearch(link.query)}
-          className="flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-primary/30 hover:shadow-card transition-all duration-300"
+          className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-card border border-border rounded-full text-xs sm:text-sm text-muted-foreground hover:text-foreground hover:border-primary/30 hover:shadow-card transition-all duration-300"
         >
-          <link.icon className="w-4 h-4" />
+          <link.icon className="w-3 h-3 sm:w-4 sm:h-4" />
           <span>{link.label}</span>
         </button>
       ))}
