@@ -60,8 +60,8 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
   }
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between text-sm text-muted-foreground pb-2 border-b border-border">
+    <div className="space-y-3 sm:space-y-4">
+      <div className="flex items-center justify-between text-xs sm:text-sm text-muted-foreground pb-2 border-b border-border">
         <p>
           حدود{" "}
           <span className="font-semibold text-foreground">
@@ -71,7 +71,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
         </p>
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-3">
         {results.map((result) => (
           <SearchResult key={result.id} result={result} />
         ))}
